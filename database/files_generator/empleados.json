@@ -1,0 +1,74 @@
+[
+    {
+        "name": "id",
+        "dbType": "increments",
+        "htmlType": "",
+        "validations": "",
+        "searchable": false,
+        "fillable": false,
+        "primary": true,
+        "inForm": false,
+        "inIndex": false
+    },
+	{
+        "name": "dni",
+        "dbType": "integer",
+        "htmlType": "number",
+		"validations": "required,unique",
+        "searchable": true
+    },
+    {
+        "name": "nombre",
+        "dbType": "string,30",
+        "htmlType": "text",
+        "validations": "required",
+        "searchable": true
+    },
+    {
+        "name": "apellido",
+        "dbType": "string,30",
+        "htmlType": "text",
+		"validations": "required",
+        "searchable": true
+    },
+    {
+        "name": "fecha_nac",
+        "dbType": "date",
+        "htmlType": "date",
+        "validations": "required"
+    },
+    {
+        "name": "area_id",
+        "dbType": "integer:unsigned:foreign,areas,id",
+        "htmlType": "integer",
+        "relation": "mt1,Area,area_id,id"
+    },
+	{
+        "name": "user_id",
+        "dbType": "integer:unsigned:foreign,users,id",
+        "htmlType": "integer",
+        "relation": "1t1,User,user_id,id"
+    },
+    {
+        "name": "created_at",
+        "dbType": "timestamp",
+        "htmlType": "",
+        "validations": "",
+        "searchable": false,
+        "fillable": false,
+        "primary": false,
+        "inForm": false,
+        "inIndex": false
+    },
+    {
+        "name": "updated_at",
+        "dbType": "timestamp",
+        "htmlType": "",
+        "validations": "",
+        "searchable": false,
+        "fillable": false,
+        "primary": false,
+        "inForm": false,
+        "inIndex": false
+    }
+]
